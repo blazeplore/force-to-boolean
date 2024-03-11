@@ -10,7 +10,7 @@ const ForceBoolean = (value: unknown, strict = true): boolean => {
       if (value) return true;
     // Example: 0 and 1
     case "number":
-      return value > 0;
+      return value as number > 0;
     // Example: any object except null will return true
     case "object":
       return !(value === null);
